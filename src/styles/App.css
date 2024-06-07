@@ -1,0 +1,35 @@
+
+/* horizontal grouping */
+.h-landing-style{
+  margin-top: 550px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  height: 200px;
+  border-style: solid; /* can remove later */
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+}
+
+/* vertical grouping */
+.v-landing-style{
+  border-style: solid; /* can remove later */
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+}
+
+.landing-message{
+  font-size: 50px;
+  color: rgb(255, 255, 255); 
+  text-align: center;
+}
+
+/* this will be changed to a graphic later*/
+.findout-button{
+  margin-top: 20px;
+  margin-left: 70px;
+  margin-right: 70px;
+  font-family: Silkscreen;
+}
