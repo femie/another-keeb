@@ -1,10 +1,21 @@
 import './styles/App.css';
 import './styles/general.css';
-import { Suspense } from "react";
-import { Canvas } from '@react-three/fiber';
-//import { OrbitControls } from '@react-three/drei'; after amb light <OrbitControls />
+import { Suspense, useRef } from "react";
+import { Canvas, useFrame } from '@react-three/fiber';
 
-import Scene from './Startswitch.jsx';
+import Model from './4-button-key.jsx';
+
+function CamSetup(){
+  const cameraRef= useRef();
+  useFrame(() => {
+    if (cameraRef.current) {
+      cameraRef.current.position.set(5, -2, 5);
+      cameraRef.current.lookAt(0, 0, 0);
+    }
+  });
+
+  return <perspectiveCamera ref={cameraRef} near={0.1} far={1000} />;
+}
 
 function App()
 {
@@ -14,14 +25,20 @@ function App()
       </header>
     
 
-    <Canvas camera= {{fov: 64, position: [-2,2,0]}}>
-      <ambientLight intensity={5} />
+    <body>
+    <Canvas style= {{width: '100vw', height: '100vh'}}>
+      <CamSetup/>
+      <ambientLight/> {/* Ambient light to illuminate the scene */}
+      <directionalLight position={[5, 5, 5]} intensity={10} /> {/* Directional light for shadows and highlights */}
       <Suspense fallback={null}>
-        <Scene />
+        <Model position={[-1,1, -3]} rotation= {[1, -4, 0]} />
       </Suspense>
     </Canvas>
+    </body>
     </div>
   );
 }
+
+
 
 export default App;
