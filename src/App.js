@@ -26,12 +26,12 @@ function App()
     
 
     <body>
-    <Canvas style= {{width: '100vw', height: '100vh'}}>
+    <Canvas style= {{width: '100vw', height: '80vh'}}>
       <CamSetup/>
       <ambientLight/> {/* Ambient light to illuminate the scene */}
-      <directionalLight position={[5, 5, 5]} intensity={10} /> {/* Directional light for shadows and highlights */}
+      <directionalLight position={[5, 5, 5]} intensity={3.5} /> {/* Directional light for shadows and highlights */}
       <Suspense fallback={null}>
-        <Model position={[-1,1, -3]} rotation= {[1, -4, 0]} />
+        <Model position={[0, 0, -2.5]} rotation= {[1, -1, 0]} />
       </Suspense>
     </Canvas>
     </body>
