@@ -5,27 +5,12 @@ Command: npx gltfjsx@6.2.18 ./public/4-button-key.glb
 
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
-import { useHistory } from 'react-router-dom';
 
 
 export default function Model(props) {
   const group = useRef()
-  const history= useHistory();
-  const { nodes, materials, animations } = useGLTF('/4-button-key.glb')
-  const [isPressed, setIsPressed] = useState(false);
+  const { nodes, materials } = useGLTF('/4-button-key.glb')
 
-  const handleClick = () => {
-    history.push('/next-page');
-  };
-
-  const handleMouseDown = () => {
-    
-    setIsPressed(true);
-  };
-
-  const handleMouseUp = () => {
-    setIsPressed(true);
-  }
 
   return (
     <group ref={group} {...props} dispose={null}>
@@ -55,7 +40,6 @@ export default function Model(props) {
 
         <mesh
           name="Key1"
-          onClick={handleClick} //making button out of key1
           geometry={nodes.Key1.geometry}
           material={materials["Material.002"]}
           position={[-1, 0.998, 0.993]}
