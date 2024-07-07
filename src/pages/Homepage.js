@@ -4,8 +4,10 @@ import React from 'react';
 import { Suspense, useRef } from "react";
 import { Canvas, useFrame } from '@react-three/fiber';
 
+
 function CamSetup(){
   const cameraRef= useRef();
+
   useFrame(() => {
     if (cameraRef.current) {
       cameraRef.current.position.set(5, -2, 5);
@@ -16,8 +18,7 @@ function CamSetup(){
   return <perspectiveCamera ref={cameraRef} near={0.1} far={1000} />;
 }
 
-function Homepage() 
-{
+function Homepage() {
 
   return(
 
