@@ -3,6 +3,7 @@ import './styles/general.css';
 import { Link, Route, Routes } from "react-router-dom";
 import  Home from './pages/Homepage';
 import Quiz from './pages/Quizpage';
+import About from './pages/Aboutpage';
 
 
 function App()
@@ -21,6 +22,7 @@ function App()
       <Routes>
         <Route path= "/" element= {<Home />} />
         <Route path= "/Quiz" element = {<Quiz />} />
+        <Route path= "/About" element= {<About />} />
       </Routes>
    
     </>
