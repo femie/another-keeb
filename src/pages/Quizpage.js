@@ -3,7 +3,11 @@ import React from 'react';
 function Quizpage() {
   return(
 
-    <h>This da Quiz</h>
+    <div className= "qz-box">
+    <div className= "qz-intro">
+      This is the Quiz
+    </div>
+    </div>
 
   );
 }
