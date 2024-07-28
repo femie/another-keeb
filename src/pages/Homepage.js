@@ -31,7 +31,6 @@ function Homepage() {
     </Suspense>
   </Canvas>
 
-
   );
 }
 
