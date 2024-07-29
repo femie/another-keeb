@@ -3,31 +3,36 @@ import Home from './pages/Homepage';
 import Quiz from './pages/Quizpage';
 import Personas from './pages/Personas';
 import About from './pages/About';
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, NavLink } from "react-router-dom";
 
 export default function Navbar() {
 
   return (
     <div className= "nav-bar">
+      <nav className= "nav">
       <a href="/" className="site-title">
         Keeb Persona
       </a>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to="/">Home</NavLink>
         </li>
+
         <li>
-          <Link to="/Quiz">Quiz</Link>
+          <NavLink to="/Quiz">Quiz</NavLink>        
         </li>
+
         <li>
-          <Link to="/Personas">Personas</Link>
+          <NavLink to="/Personas">Personas</NavLink>        
         </li>
+
         <li>
-          <Link to="/About">About</Link>
+          <NavLink to="/About">About</NavLink>        
         </li>
 
       </ul>
 
+      </nav>
       
 
       <Routes>
@@ -35,7 +40,6 @@ export default function Navbar() {
         <Route path= "/Quiz" element = {<Quiz />} />
         <Route path= "/Personas" element = {<Personas />} />
         <Route path= "/About" element = {<About />} />
-        
       </Routes>
       </div>
 

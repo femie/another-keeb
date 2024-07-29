@@ -1,12 +1,7 @@
 
-x
+
 /* vertical grouping */
-.v-landing-style{
-  border-style: solid; /* can remove later */
-  display: flex;
-  flex-direction:column;
-  justify-content: center;
-}
+
 
 .landing-message{
   font-size: 50px;
