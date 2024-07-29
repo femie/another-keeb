@@ -12,4 +12,4 @@ function Personas() {
   );
 }
 
-export default Quizpage;
+export default Personas;

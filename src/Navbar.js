@@ -1,7 +1,9 @@
 import React from 'react';
 import Home from './pages/Homepage';
 import Quiz from './pages/Quizpage';
-import { Route, Routes } from "react-router-dom";
+import Personas from './pages/Personas';
+import About from './pages/About';
+import { Route, Routes, Link } from "react-router-dom";
 
 export default function Navbar() {
 
@@ -13,16 +15,16 @@ export default function Navbar() {
       </a>
       <ul>
         <li>
-          <a href= "/Home">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href= "/Quiz">Quiz</a>
+          <Link to="/Quiz">Quiz</Link>
         </li>
         <li>
-          <a href="/Personas">Personas</a>
+          <Link to="/Personas">Personas</Link>
         </li>
         <li>
-          <a href="/Creator">Creator</a>
+          <Link to="/About">About</Link>
         </li>
 
       </ul>
@@ -30,8 +32,10 @@ export default function Navbar() {
       
 
       <Routes>
-        <Route path= "/Home" element= {<Home />}/>
+        <Route path= "/" element= {<Home />}/>
         <Route path= "/Quiz" element = {<Quiz />} />
+        <Route path= "/Personas" element = {<Personas />} />
+        <Route path= "/About" element = {<About />} />
         
       </Routes>
       </div>
