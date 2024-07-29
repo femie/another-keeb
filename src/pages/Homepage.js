@@ -22,12 +22,12 @@ function Homepage() {
 
   return(
 
-  <Canvas style= {{width: '100vw', height: '80vh'}}>
+  <Canvas style= {{width: '100vw', height: '70vh'}}>
     <CamSetup/>
     <ambientLight/> {/* Ambient light to illuminate the scene */}
     <directionalLight position={[5, 5, 5]} intensity={3.5} /> {/* Directional light for shadows and highlights */}
     <Suspense fallback={null}>
-      <Model position={[0, 0, -2.5]} rotation= {[1, -1, 0]} />
+      <Model position={[0, 0, -1]} rotation= {[1, -1, 0]} />
     </Suspense>
   </Canvas>
 
