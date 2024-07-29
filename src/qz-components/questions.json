@@ -22,7 +22,7 @@
     {
         "question": "How would you describe the state of your living space?", 
         "answers": [
-            {"text": "I’m a maximalist! I thrive in organized clutter!", "score": 1 }
+            {"text": "I’m a maximalist! I thrive in organized clutter!", "score": 1 },
             {"text": "It’s a bit messy, but I try to organize and deep clean at least once a month.", "score": 2 },
             {"text": "There aren’t many things laying around, I always put things away once I’ve used them!", "score": 3 },
             {"text": "I’m a minimalist, I don't have much so everything is always organized.", "score": 4 }
