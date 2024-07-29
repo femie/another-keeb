@@ -1,4 +1,4 @@
-[ 
+const quizData= [ 
     {
         "question": "How would you describe your job?", 
         "answers": [
@@ -29,4 +29,6 @@
 
         ]
     }
-]
+];
+
+export default quizData;
