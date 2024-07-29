@@ -9,21 +9,17 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "babel": "^6.23.0",
     "bootstrap": "^5.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.24.0",
-    "three": "^0.166.1"
+    "react-router-dom": "^6.24.0"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build",
+    "start": "set SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "set SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "@babel/plugin-proposal-private-property-in-object": "^7.18.6",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "@babel/plugin-proposal-private-property-in-object": "^7.18.6"
   },
   "browserslist": {
     "production": [
@@ -38,21 +34,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.24.9",
-    "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@babel/preset-env": "^7.24.8",
-    "@babel/preset-react": "^7.24.7",
-    "babel-loader": "^9.1.3",
-    "doctrine": "^3.0.0",
-    "eslint": "^9.7.0",
-    "eslint-plugin-react": "^7.35.0",
-    "globals": "^15.8.0",
     "react-scripts": "^5.0.1"
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "babel.config.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    
+  }
 }
