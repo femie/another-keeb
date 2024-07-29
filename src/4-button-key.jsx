@@ -12,11 +12,6 @@ export default function Model(props) {
   const group = useRef();
   const { nodes, materials } = useGLTF('/4-button-key.glb')
 
-  //on hover
-
-
-
-  //on click
   const handleClick = (event) => {
     const meshName= event.object.name;
     switch(meshName) {
@@ -27,10 +22,6 @@ export default function Model(props) {
       case 'Key2':
         window.location.href= '/Quiz';
         break; 
-      
-      case 'Key3':
-        window.location.href= '/About';
-        break;
         
       default:
         break;
@@ -42,15 +33,12 @@ export default function Model(props) {
 
     currentGroup.children.forEach((child) => {
       child.addEventListener('click', handleClick);
-      child.addEventListener('hover', handleHover);
 
     });
 
     return () => {
       currentGroup.children.forEach((child) => {
         child.removeEventListener('click', handleClick);
-        child.removeEventListener('hover', handleHover);
-
       });
     };
   }, []);
@@ -97,7 +85,6 @@ export default function Model(props) {
         />
         <mesh
           name="Key3"
-          onClick={handleClick}
           geometry={nodes.Key3.geometry}
           material={materials["Material.004"]}
           position={[0.984, 0.998, 0.993]}
