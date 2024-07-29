@@ -7,6 +7,7 @@ export default function Navbar() {
 
   return (
     <div className= "nav-bar">
+      <nav className= "nav">
       <a href="/" className="site-title">
         Keeb Persona
       </a>
@@ -28,7 +29,7 @@ export default function Navbar() {
         </li>
 
       </ul>
-
+      </nav>
       
 
       <Routes>
