@@ -27,7 +27,7 @@ function Homepage() {
     <ambientLight intensity= {0.5}/> {/* Ambient light to illuminate the scene */}
     <directionalLight position={[-5, 5, 5]} intensity={3} /> {/* Directional light for shadows and highlights */}
     <Suspense fallback={null}>
-      <Model position={[0, 5.5, 1]} rotation= {[.6, 4.04, 0]} />
+      <Model position={[0, 6.3, 1]} rotation= {[.6, 4.04, 0]} />
     </Suspense>
 
   </Canvas>

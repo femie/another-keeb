@@ -4,9 +4,9 @@ import { useGLTF } from '@react-three/drei'
 export default function Model(props) {
   const group = useRef();
   const { nodes, materials } = useGLTF('./keebhome.glb')
-  
 
   const handleClick = (event) => {
+
     const meshName= event.object.name;
     switch(meshName) {
       case 'Esc':
@@ -41,6 +41,7 @@ export default function Model(props) {
   return (
     <group ref= {group} {...props} dispose={null}>
       <mesh
+        name="Board"
         castShadow
         receiveShadow
         geometry={nodes.Board.geometry}
@@ -49,6 +50,8 @@ export default function Model(props) {
         rotation={[0, 0.677, 0]}
       />
       <mesh
+        onClick={handleClick}
+        name="Esc"
         castShadow
         receiveShadow
         geometry={nodes.Key1.geometry}
@@ -58,6 +61,7 @@ export default function Model(props) {
         scale={[1, 0.686, 1]}
       />
       <mesh
+        name="Key2"
         castShadow
         receiveShadow
         geometry={nodes.Key2.geometry}
@@ -67,6 +71,7 @@ export default function Model(props) {
         scale={[1, 0.686, 1]}
       />
       <mesh
+        name="Key3"
         castShadow
         receiveShadow
         geometry={nodes.Key3.geometry}
@@ -76,6 +81,7 @@ export default function Model(props) {
         scale={[1, 0.686, 1]}
       />
       <mesh
+        name="Key4"
         castShadow
         receiveShadow
         geometry={nodes.Key4.geometry}
@@ -85,6 +91,8 @@ export default function Model(props) {
         scale={[1, 0.686, 1]}
       />
       <mesh
+        onClick={handleClick}
+        name="Enter"
         castShadow
         receiveShadow
         geometry={nodes.Key5.geometry}
@@ -94,6 +102,7 @@ export default function Model(props) {
         scale={[0.568, 0.341, 1]}
       />
       <mesh
+        name="Key6"
         castShadow
         receiveShadow
         geometry={nodes.Key6.geometry}
@@ -103,6 +112,7 @@ export default function Model(props) {
         scale={[1, 0.686, 1]}
       />
       <mesh
+        name="Key7"
         castShadow
         receiveShadow
         geometry={nodes.Key7.geometry}
@@ -112,6 +122,7 @@ export default function Model(props) {
         scale={[1, 0.686, 1]}
       />
       <mesh
+        name="Key8"
         castShadow
         receiveShadow
         geometry={nodes.Key8.geometry}
@@ -121,6 +132,8 @@ export default function Model(props) {
         scale={[1, 0.686, 1]}
       />
       <mesh
+        onClick={handleClick}
+        name="Space"
         castShadow
         receiveShadow
         geometry={nodes.Spacebar.geometry}
@@ -130,6 +143,7 @@ export default function Model(props) {
         scale={[1, 0.686, 1]}
       />
       <mesh
+        name="Start-text"
         castShadow
         receiveShadow
         geometry={nodes.Start.geometry}
@@ -139,6 +153,7 @@ export default function Model(props) {
         scale={[0.294, 0.225, 0.328]}
       />
       <mesh
+        name="Personas-text"
         castShadow
         receiveShadow
         geometry={nodes.Personas.geometry}
@@ -148,6 +163,7 @@ export default function Model(props) {
         scale={0.273}
       />
       <mesh
+        name="About-text"
         castShadow
         receiveShadow
         geometry={nodes.About.geometry}
