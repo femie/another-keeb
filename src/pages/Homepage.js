@@ -25,7 +25,7 @@ function Homepage() {
   <Canvas style= {{width: '100vw', height: '80vh'}}>
     <CamSetup/>
     <ambientLight/> {/* Ambient light to illuminate the scene */}
-    <directionalLight position={[5, 5, 5]} intensity={3.5} /> {/* Directional light for shadows and highlights */}
+    <directionalLight position={[-5.5033, -3.3787, 13.134]} intensity={Math.PI*5} /> {/* Directional light for shadows and highlights */}
     <Suspense fallback={null}>
       <Model position={[0, 0, -2.5]} rotation= {[1, -1, 0]} />
     </Suspense>
