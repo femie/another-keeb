@@ -1,21 +1,21 @@
 
-import Model from '../4-button-key';
+import Model from '../keeb-model/keebhome';
 import React from 'react';
 import { Suspense, useRef } from "react";
 import { Canvas, useFrame } from '@react-three/fiber';
-
+import { PerspectiveCamera } from '@react-three/drei';
 
 function CamSetup(){
   const cameraRef= useRef();
 
   useFrame(() => {
     if (cameraRef.current) {
-      cameraRef.current.position.set(5, -2, 5);
+      cameraRef.current.position.set(0, 2, 0);
       cameraRef.current.lookAt(0, 0, 0);
     }
   });
 
-  return <perspectiveCamera ref={cameraRef} near={0.1} far={1000} />;
+  return <PerspectiveCamera makeDefault fov= {70} position={[0, 7, 7]}/>;
 }
 
 function Homepage() {
@@ -24,11 +24,12 @@ function Homepage() {
 
   <Canvas style= {{width: '100vw', height: '80vh'}}>
     <CamSetup/>
-    <ambientLight/> {/* Ambient light to illuminate the scene */}
-    <directionalLight position={[-5.5033, -3.3787, 13.134]} intensity={Math.PI*5} /> {/* Directional light for shadows and highlights */}
+    <ambientLight intensity= {0.5}/> {/* Ambient light to illuminate the scene */}
+    <directionalLight position={[-5, 5, 5]} intensity={3} /> {/* Directional light for shadows and highlights */}
     <Suspense fallback={null}>
-      <Model position={[0, 0, -2.5]} rotation= {[1, -1, 0]} />
+      <Model position={[0, 5.5, 1]} rotation= {[.6, 4.04, 0]} />
     </Suspense>
+
   </Canvas>
 
 
