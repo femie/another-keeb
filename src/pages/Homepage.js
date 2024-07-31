@@ -1,5 +1,5 @@
 
-import Model from '../keeb-model/keebhome';
+import Model from '../keeb-model/fixed-keeb';
 import React from 'react';
 import { Suspense, useRef } from "react";
 import { Canvas, useFrame } from '@react-three/fiber';
@@ -15,7 +15,7 @@ function CamSetup(){
     }
   });
 
-  return <PerspectiveCamera makeDefault fov= {70} position={[0, 7, 7]}/>;
+  return <PerspectiveCamera makeDefault fov= {50} position={[0, 7, 7]}/>;
 }
 
 function Homepage() {
