@@ -14,73 +14,71 @@ export default function Model(props) {
     const { nodes, materials } = useGLTF('/fixed-keeb.gltf')    
     
     const jellyBoard= new MeshPhysicalMaterial({
-        color: '#208b8f',
+        color: '#372549',
         roughness: 0.2,
-        metalness: 0.4,
+        metalness: 0.2,
         reflectivity: .3,
-        IOR: 2.3,
-        opacity: 1,
+        IOR: 1.4,
+        opacity: 0.8,
         transmission: 0.9,
         thickness: 1,
-        clearcoat: .7,
-        clearcoatRoughness: .1,
-        iridesence: .5,
+        clearcoat: .3,
+        clearcoatRoughness: .2,
     });
 
     const jellyMaterialEsc= new MeshPhysicalMaterial({
-        color: '#937666',
-        roughness: 0.2,
-        metalness: 0.2,
-        reflectivity: 1,
-        IOR: 2.3,
-        opacity: 1,
-        transmission: 0.9,
-        thickness: 1,
-        clearcoat: .7,
-        clearcoatRoughness: .1,
-        iridesence: .5, 
+      color: '#774C60',
+      roughness: 0.2,
+      metalness: 0.2,
+      reflectivity: .3,
+      IOR: 1.4,
+      opacity: 0.8,
+      transmission: 0.9,
+      thickness: 1,
+      clearcoat: .3,
+      clearcoatRoughness: .2,
         
     });
 
     const jellyMaterialKeys= new MeshPhysicalMaterial({
-        color: '#DBD0E6',
+      color: '#EACDC2',
         roughness: 0.2,
         metalness: 0.2,
-        reflectivity: 1,
-        IOR: 2.3,
-        opacity: 0.9,
-        transmission: .3,
+        reflectivity: .3,
+        IOR: 1.4,
+        opacity: 0.8,
+        transmission: 0.9,
         thickness: 1,
-        clearcoat: .7,
-        clearcoatRoughness: .1,
+        clearcoat: .3,
+        clearcoatRoughness: .2,
 
     });
 
     const jellyEnter= new MeshPhysicalMaterial({
-        color: '#DBD0E6',
+      color: '#ffafa8',
         roughness: 0.2,
         metalness: 0.2,
-        reflectivity: 1,
-        IOR: 2.3,
-        opacity: 0.9,
+        reflectivity: .3,
+        IOR: 1.4,
+        opacity: 0.8,
         transmission: 0.9,
         thickness: 1,
-        clearcoat: .7,
-        clearcoatRoughness: .1,
+        clearcoat: .3,
+        clearcoatRoughness: .2,
         
     });
     
     const jellySpace= new MeshPhysicalMaterial({
-      color: '#ECBEB4',
-      roughness: 0.2,
-      metalness: 0.2,
-      reflectivity: 1,
-      IOR: 2.3,
-      opacity: 1,
-      transmission: 0.9,
-      thickness: 1,
-      clearcoat: .7,
-      clearcoatRoughness: .1,
+      color: '#975565',
+        roughness: 0.2,
+        metalness: 0.2,
+        reflectivity: .3,
+        IOR: 1.4,
+        opacity: 0.8,
+        transmission: 0.9,
+        thickness: 1,
+        clearcoat: .3,
+        clearcoatRoughness: .2,
         
 
 

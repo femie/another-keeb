@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import quizData from '../qz-components/quizData';
+import  '../styles/Quiz.css';
 
 function Quizpage() {
 
@@ -24,7 +25,7 @@ function Quizpage() {
   };
 
     return(
-      <div>
+      <div className= 'current-q'>
         <h2> {currentQuestion.question}</h2>
         <ul>
           {currentQuestion.answers.map((answer, index) =>(
