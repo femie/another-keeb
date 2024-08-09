@@ -1,6 +1,6 @@
 
 
-import Model from '../keeb-model/fixed-keeb';
+import Model from '../keeb-model/nokeeb';
 import React from 'react';
 import { Suspense, useRef } from "react";
 import { Canvas } from '@react-three/fiber';
@@ -22,9 +22,9 @@ function Homepage() {
 
   <Canvas className= "can" style= {{width: '100vw', height: '80vh'}}>
     <CamSetup/>
-    <ambientLight intensity= {1}/> {/* Ambient light to illuminate the scene */}
-
+    
       <Suspense fallback={null}>
+        
       <Model position={[0,7, 0]} rotation= {[1.01, 4.04, 0]} />
     </Suspense>
 
