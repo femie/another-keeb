@@ -24,7 +24,7 @@ function Homepage() {
     <CamSetup/>
     
       <Suspense fallback={null}>
-        
+      
       <Model position={[0,7, 0]} rotation= {[1.01, 4.04, 0]} />
     </Suspense>
 

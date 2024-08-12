@@ -7,8 +7,11 @@ import { useGLTF, PerspectiveCamera} from '@react-three/drei'
 import { useLoader } from '@react-three/fiber';
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader';
 import { MeshPhysicalMaterial } from 'three';
-import KeebMat from './keeb-material'
-
+import KeebMat from './Materials/keeb-material';
+import EnterMat from './Materials/enter-material';
+import SpaceMat from './Materials/space-material';
+import BoardMat from './Materials/board-material';
+import EscMat from './Materials/esc-material';
 
 export default function Model(props) {
 
@@ -17,20 +20,6 @@ export default function Model(props) {
     const texture = useLoader(RGBELoader, '/empty_warehouse_01_2k.hdr');
     console.log('HDR Texture Loaded:', texture);
 
-
-
-    const jellyMaterialEsc=  new MeshPhysicalMaterial({
-      color: '#172A3A',
-        roughness: 0.2,
-        metalness: 0.2,
-        reflectivity: .3,
-        opacity: 0.8,
-        transmission: 0.9,
-        thickness: 1,
-        clearcoat: .3,
-        clearcoatRoughness: .2,
-
-    });
 
     const jellyMaterialKeys= new MeshPhysicalMaterial({
       color: '#508991',
@@ -45,40 +34,12 @@ export default function Model(props) {
 
     });
 
-    const jellyEnter= new MeshPhysicalMaterial({
-        color: '#172A3A',
-        roughness: 0.2,
-        metalness: 0.2,
-        reflectivity: .3,
-        opacity: 0.8,
-        transmission: 0.9,
-        thickness: 1,
-        clearcoat: .3,
-        clearcoatRoughness: .2,
-        
-    });
-    
-   
-    const jellySpace= new MeshPhysicalMaterial({
-
-        color: '#172A3A',
-        roughness: 0.2,
-        metalness: 0.2,
-        reflectivity: .3,
-        opacity: 0.8,
-        transmission: 0.9,
-        thickness: 1,
-        clearcoat: .3,
-        clearcoatRoughness: .2,
-  });
+  
 
   const textMat= new MeshPhysicalMaterial({
 
     color: '#F7EBEC',
-    roughness: 0.2,
-    opacity: 1,
-    transmission: 0.99,
-    thickness: 1,
+   
 });
 
     const handleClick = (event) => {
@@ -140,6 +101,7 @@ export default function Model(props) {
           position={[-5.465, 0.791, 4.717]}
         />
 
+       
         <mesh
           castShadow
           receiveShadow
@@ -147,18 +109,20 @@ export default function Model(props) {
           position={[0.171, 0.401, -0.205]}
           rotation={[0, 0.677, 0]}
           >
-        <KeebMat/>
+          <BoardMat/>
         </mesh>
+
 
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Key1.geometry}
-          material={jellyMaterialEsc}
           position={[-1.648, 1.933, 3.677]}
           rotation={[0, 0.677, 0]}
           scale={[1, 0.686, 1]}
-        />     
+        >
+          <EscMat/>
+          </mesh>     
         
 
         <mesh
@@ -203,11 +167,14 @@ export default function Model(props) {
           castShadow
           receiveShadow
           geometry={nodes.Key5.geometry}
-          material={jellyEnter}
           position={[-1.605, 0.919, -1.133]}
           rotation={[0, 0.677, 0]}
           scale={[0.568, 0.341, 1]}
-        />
+        >
+          <EnterMat />
+        </mesh>
+
+
         <mesh
           castShadow
           receiveShadow
@@ -251,11 +218,14 @@ export default function Model(props) {
           castShadow
           receiveShadow
           geometry={nodes.Spacebar.geometry}
-          material={jellySpace}
           position={[-0.264, 1.889, 2.574]}
           rotation={[0, 0.677, 0]}
           scale={[1, 0.686, 1]}
-        />
+        >
+
+          <SpaceMat/>
+        </mesh>
+
         <mesh
           castShadow
           receiveShadow
