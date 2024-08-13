@@ -6,12 +6,17 @@ function Quizpage() {
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const currentQuestion = quizData[currentQuestionIndex];
+  const [totalScore, setTotalScore]= useState(0);
+
 
   const handleAnswerClick = (score) => {
-    console.log('Selected score:', score); // You can process the score here
-    // Move to the next question or handle quiz completion
+    console.log('Selected score:', score); 
+    setTotalScore(totalScore + score);
+    console.log('Total score:', totalScore);
     if (currentQuestionIndex < quizData.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
+
+
     } else {
       console.log('Quiz completed');
       // Handle quiz completion logic here
@@ -21,11 +26,14 @@ function Quizpage() {
   const handlePreviousClick = () => {
     if (currentQuestionIndex > 0) {
       setCurrentQuestionIndex(currentQuestionIndex - 1);
+
     }
   };
 
     return(
+    
       <div className= 'current-q'>
+        <h2 className='tracking-q'>{currentQuestionIndex} / 10</h2>
         <h2 className='question-header'> {currentQuestion.question}</h2>
         <ul className='answers'>
           {currentQuestion.answers.map((answer, index) =>(
@@ -36,7 +44,7 @@ function Quizpage() {
         <button
           onClick= {handlePreviousClick}
           disabled= {currentQuestionIndex===0}>
-            Previous
+            Go Back
         </button>
 
         <button 
