@@ -11,7 +11,8 @@ function Quizpage() {
 
   const handleAnswerClick = (score) => {
     console.log('Selected score:', score); 
-    setTotalScore(totalScore + score);
+    setTotalScore(+score);
+
     console.log('Total score:', totalScore);
     if (currentQuestionIndex < quizData.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
@@ -26,8 +27,10 @@ function Quizpage() {
   const handlePreviousClick = () => {
     if (currentQuestionIndex > 0) {
       setCurrentQuestionIndex(currentQuestionIndex - 1);
-
     }
+    
+    console.log('score undoed after going back', totalScore);
+
   };
 
     return(
