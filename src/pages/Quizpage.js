@@ -26,24 +26,26 @@ function Quizpage() {
 
     return(
       <div className= 'current-q'>
-        <h2> {currentQuestion.question}</h2>
-        <ul>
+        <h2 className='question-header'> {currentQuestion.question}</h2>
+        <ul className='answers'>
           {currentQuestion.answers.map((answer, index) =>(
             <li key= {index} onClick={() => handleAnswerClick(answer.score)}> {answer.text}</li>
           ))}
         </ul>
+
         <button
           onClick= {handlePreviousClick}
           disabled= {currentQuestionIndex===0}>
             Previous
         </button>
+
         <button 
         onClick={() => {
           if (currentQuestionIndex < quizData.length - 1) {
             setCurrentQuestionIndex(currentQuestionIndex + 1);
           } else {
             console.log('Quiz completed');
-            // Handle quiz completion logic here
+           
           }
         }}
         disabled={currentQuestionIndex === quizData.length - 1}

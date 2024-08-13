@@ -4,7 +4,7 @@ const quizData= [
         "answers": [
             {"text": "I work at my desk all day, I rarely talk to people face to face.", "score": 1 },
             {"text": "I work in a hybrid environment. I usually talk to people around half the time I work.", "score": 2 },
-            {"text:": "I interact with and help people for a living! I'm on my feet quite often!", "score": 3 },
+            {"text": "I interact with and help people for a living! I'm on my feet quite often!", "score": 3 },
             {"text": "I am almost never sitting down, my job requires me to have a lot of energy and interaction!", "score": 4 }
         ]
     },

@@ -24,6 +24,11 @@ export default function Model(props) {
     }
   };
 
+
+  const textMat = () => {
+    MeshP
+  }
+
   useEffect(() => {
     const currentGroup = group.current;
 

@@ -13,7 +13,6 @@ export default function Model(props) {
     const group = useRef();
     const { nodes, materials } = useGLTF('/fixed-keeb.gltf')    
     
-   
     
     {/*const jellyBoard= new MeshPhysicalMaterial({
         color: '#372549',

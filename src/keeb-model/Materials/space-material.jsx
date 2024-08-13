@@ -3,15 +3,15 @@ import { MeshTransmissionMaterial } from '@react-three/drei';
 
 const SpaceMaterial = () => (
   <MeshTransmissionMaterial
-    color={"EFAAC4"}
+    color={'#c5d9fc'}
     transmission={0.9}
     clearcoat={0.3}
     clearcoatRoughness={0.5}
     thickness={0.2}
     roughness={0.2}
     ior={1.4}
-    opacity={0.8}
-  />
+    chromaticAberration={.2}
+    />
 );
 
 export default SpaceMaterial;  

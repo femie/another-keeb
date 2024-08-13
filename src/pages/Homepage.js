@@ -11,7 +11,7 @@ import { PerspectiveCamera } from '@react-three/drei';
 function CamSetup(){
   const cameraRef= useRef();
 
-  return <PerspectiveCamera makeDefault fov= {50} position={[0, 7, 7]} ref={cameraRef}/>;
+  return <PerspectiveCamera makeDefault fov= {55} position={[0, 7, 7]} ref={cameraRef}/>;
 }
 
 
@@ -22,9 +22,10 @@ function Homepage() {
 
   <Canvas className= "can" style= {{width: '100vw', height: '80vh'}}>
     <CamSetup/>
-    
+ 
+
       <Suspense fallback={null}>
-      
+        
       <Model position={[0,7, 0]} rotation= {[1.01, 4.04, 0]} />
     </Suspense>
 

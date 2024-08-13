@@ -4,18 +4,15 @@ import './styles/general.css';
 import Nav from './Navbar';
 
 
-
-
-
 function App()
 {
   return (
 
-  <>
+  
   <Nav />
     
 
-  </>
+  
   );
 }
 
