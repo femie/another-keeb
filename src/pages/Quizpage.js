@@ -8,12 +8,11 @@ function Quizpage() {
   const currentQuestion = quizData[currentQuestionIndex];
   const [totalScore, setTotalScore]= useState(0);
 
-
   const handleAnswerClick = (score) => {
     console.log('Selected score:', score); 
-    setTotalScore(+score);
+    
 
-    console.log('Total score:', totalScore);
+    console.log('Total score:', setTotalScore);
     if (currentQuestionIndex < quizData.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
 

@@ -28,7 +28,22 @@ const quizData= [
             {"text": "I’m a minimalist, I don't have much so everything is always organized.", "score": 4 }
 
         ]
-    }
+    }, 
+
+    { 
+        "question": "What is your work ethic like?", 
+        "answers": [
+            {"text": "I procrastinate, but I thrive under the pressure of deadlines are approaching.", "score": 1 },
+            {"text": "I usually get things done with random spikes of energy, it's hard to work with a plan!", "score": 2 },
+            {"text": "I start working the moment a task is assigned, being proactive makes things easy!", "score": 3 },
+            {"text": "I usually wing it last minute and it works out!", "score": 4 }
+
+            
+        ]
+
+    }    
+
+
 ];
 
 export default quizData;
