@@ -7,10 +7,10 @@ const BoardMaterial = () => (
   transmission={0.9}
   clearcoat={0.3}
   clearcoatRoughness={0.5}
-  thickness={1.5}
+  thickness={.5}
   roughness={0}
   ior={1.4}
-  chromaticAberration={.2}
+  chromaticAberration={.7}
   />
 );
 

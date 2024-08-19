@@ -13,9 +13,8 @@ import ISTP from './pages/all-personas/ISTP/istp-page';
 function App()
 {
   return (
-    <>
-  
-      <Nav />
+    <div>
+      <Nav/>
       <Routes>
         <Route path= "/" element= {<Home />}/>
         <Route path= "/Quiz" element = {<Quiz />} />
@@ -25,7 +24,7 @@ function App()
         </Route>
         <Route path= "/About" element = {<About />} />
       </Routes>
-  </>
+      </div>
   );
 }
 

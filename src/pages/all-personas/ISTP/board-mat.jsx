@@ -3,7 +3,7 @@ import { MeshTransmissionMaterial } from '@react-three/drei';
 
 const BoardMat = () => (
   <MeshTransmissionMaterial
-  color={"#080554"}
+  color={"black"}
   opacity={1}
   transmission={.6}
   roughness={.2}

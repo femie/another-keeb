@@ -17,9 +17,10 @@ function ISTPPage() {
 
   return(
 
+    <>
+     <h1 className= "msg">Split Ergo</h1>
   <Canvas className= "can" style= {{width: '100vw', height: '60vh'}}>
     <CamSetup/>
- 
 
       <Suspense fallback={null}>
         
@@ -27,7 +28,7 @@ function ISTPPage() {
     </Suspense>
 
   </Canvas>
-
+</>
 
   );
 }

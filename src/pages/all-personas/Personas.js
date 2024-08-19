@@ -21,8 +21,10 @@ function Personas() {
      <ul>
        <li>
          <NavLink to="istp">ISTP</NavLink>
-         <NavLink to="istj">ISTJ</NavLink>
-         
+       </li>
+
+       <li>
+       <NavLink to="istj">ISTJ</NavLink>
        </li>
 
      </ul>

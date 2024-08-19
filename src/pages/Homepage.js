@@ -15,6 +15,7 @@ function CamSetup(){
 }
 
 
+
 function Homepage() {
 
 
@@ -25,8 +26,8 @@ function Homepage() {
  
 
       <Suspense fallback={null}>
-        
-      <Model position={[0,7, 0]} rotation= {[1.01, 4.04, 0]} />
+        <ambientLight position={[0,7,0]}/>
+      <Model position={[0,7, 0]} rotation= {[1.04, 4.04, 0]} />
     </Suspense>
 
   </Canvas>
@@ -36,3 +37,5 @@ function Homepage() {
 }
 
 export default Homepage;
+
+

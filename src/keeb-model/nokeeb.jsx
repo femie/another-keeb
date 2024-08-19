@@ -82,15 +82,16 @@ export default function Model(props) {
           name="DirectionalLight"
           intensity={3}
           decay={0.5}
-          position={[4.34, 5.625, 2.139]}
+          position={[4.7, 5.625, 2.139]}
         />
-        <directionalLight
+         <directionalLight
           color={"#fffff"}
-          name="DirectionalLight_2"
+          name="DirectionalLight"
           intensity={3}
           decay={0.5}
-          position={[-2.709, 4.245, -4.818]}
+          position={[-10, 9.625, .139]}
         />
+   
         <directionalLight
           color={"#fffff"}
           name="DirectionalLight_4"
@@ -98,6 +99,7 @@ export default function Model(props) {
           decay={0.5}
           position={[-5.465, 0.791, 4.717]}
         />
+  
 
        
         <mesh

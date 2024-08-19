@@ -35,7 +35,7 @@ function Quizpage() {
     return(
     
       <div className= 'current-q'>
-        <h2 className='tracking-q'>{currentQuestionIndex} / 10</h2>
+        <h2 className='tracking-q'>{currentQuestionIndex+1} / 10</h2>
         <h2 className='question-header'> {currentQuestion.question}</h2>
         <ul className='answers'>
           {currentQuestion.answers.map((answer, index) =>(
