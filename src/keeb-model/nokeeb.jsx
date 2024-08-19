@@ -14,14 +14,18 @@ import SpaceMat from './Materials/space-material';
 import BoardMat from './Materials/board-material';
 import EscMat from './Materials/esc-material';
 
+
 export default function Model(props) {
 
     const group = useRef();
     const { nodes } = useGLTF('/noalphakeeb.glb')    
     const texture = useLoader(RGBELoader, '/empty_warehouse_01_2k.hdr');
     console.log('HDR Texture Loaded:', texture);
+   
 
+    
 
+ 
   
 
   const textMat= new MeshPhysicalMaterial({
@@ -99,9 +103,9 @@ export default function Model(props) {
           decay={0.5}
           position={[-5.465, 0.791, 4.717]}
         />
-  
 
-       
+
+
         <mesh
           castShadow
           receiveShadow
@@ -112,6 +116,7 @@ export default function Model(props) {
           <BoardMat/>
         </mesh>
 
+       
 
         <mesh
           onClick={handleClick}
@@ -257,6 +262,8 @@ export default function Model(props) {
         />
 
       
+    
+        
       </group>
     );
   }
