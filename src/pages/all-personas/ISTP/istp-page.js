@@ -8,7 +8,7 @@ import React, { Suspense } from "react";
 
 function CamSetup(){
 
-  return <PerspectiveCamera makeDefault fov= {50} position={[0, 8, 14]} />;
+  return <PerspectiveCamera makeDefault fov= {50} position={[0, 8, 17]} />;
 }
 
 
@@ -24,7 +24,7 @@ function ISTPPage() {
 
       <Suspense fallback={null}>
         
-      <ISTPKeeb position={[-3.5,8, -2]} rotation= {[.5, 4.7, -.6]}/>
+      <ISTPKeeb position={[-3.5,9, 6]} rotation= {[0, 4.7, -1]}/>
     </Suspense>
 
   </Canvas>

@@ -43,7 +43,7 @@ export default function Model(props) {
              name="DirectionalLight"
              intensity={3}
              decay={0.5}
-             position={[-0.15, 7.956, -3.906]}
+             position={[1, 7.956, 1]}
       />
 
 
@@ -208,8 +208,8 @@ export default function Model(props) {
         name="Plane"
         geometry={nodes.Plane.geometry}
         material={nodes.Plane.material}
-        position={[-0.171, 3.87, 1.167]}
-        scale={3.844}
+        position={[-0.171, 4, 1.167]}
+        scale={3.9}
       >
         <BoardMat/>
         </mesh>
@@ -385,9 +385,9 @@ export default function Model(props) {
         name="Plane001"
         geometry={nodes.Plane001.geometry}
         material={textMat}
-        position={[-0.171, 3.87, -7.702]}
+        position={[-0.2, 4, -7.702]}
         rotation={[0, 0, -Math.PI]}
-        scale={-3.844}
+        scale={-3.9}
       >
         <BoardMat/>
         </mesh>
