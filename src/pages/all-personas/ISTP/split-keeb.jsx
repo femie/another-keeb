@@ -43,7 +43,7 @@ export default function Model(props) {
              name="DirectionalLight"
              intensity={3}
              decay={0.5}
-             position={[1, 7.956, 1]}
+             position={[-3, 7.956, 1]}
       />
 
 
